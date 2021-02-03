@@ -1,0 +1,15 @@
+pour charger l'environnement :
+
+Apple Pascal v1.3 - APPLE1 disk.dsk ==> drive 1 (volume APPLE1:)
+b3.dsk ==> drive 2 (volume TK:)
+
+puis edition du prog. principal (smp.text)
+NB : la librairie mouse graphics tool lit est dans le fichier system.library du disque original. Dans b3.dsk, je l'ai renommée MRGTK.
+Il faut y faire référence dans le code avec la clause : {$U tk:MRGTK}, tk: étant le volume. 
+
+C(ompile) fonctinne bien, mais prned du temps.
+il faut spécifier un nom de fichier code, qui sera généré sous APPLE1: (par exmeple : SMP ==> produit le fichier SMP.CODE)
+
+Enfin, avec CiderPress, il faut ouvrir BBB.dsk qui est au départ une copie de Disk1.sdk = disquette 1 du Mouse Graphic Tool Kit), supprimer SYSTEM.STARTUP, y copier le fichier code depuis APPLE1: et renommer le fichier en SYSTEM.STARTUP.
+
+On boote sur BBB.dsk avec AppleWin .... Et ça marche !!!!!

@@ -1,0 +1,28 @@
+pour charger l'environnement :
+
+Apple Pascal v1.3 - APPLE1 disk.dsk ==> drive 1 (volume APPLE1:)
+b3.dsk ==> drive 2 (volume TK:)
+
+puis edition du prog. principal (smp.text)
+NB : la librairie mouse graphics tool kit est dans le fichier system.library du disque original. Dans b3.dsk, je l'ai renommée MRGTK.
+Il faut y faire référence dans le code avec {$U tk:MRGTK} tk: étant le volume. 
+
+C(ompile) fonctinne bien, mais prned du temps.
+il faut spécifier un nom de fichier code, qui sera généré sous APPLE1:
+
+Enfin, avec CiderPress, il faut ouvrir b4.dsk, supprimer SYSTEM.STARTUP, y copier le fichier code depuis APPLE1: et renommer le fichier en SYSTEM.STARTUP.
+
+On boote sur b4.dsk avec AppleWin .... Et ça marche !!!!!
+NB : il faut que le 2ème slot soit vide (je ne sais pas pourquoi)
+
+ATTENTION : il faut que l'émulation de la souris soit activée dans Applewin (Configuration / Input / mous interface in slot 4)
+
+
+décembre 2019, j'ai :
+fait une copie de b3.dsk
+ouvert la copie avec CiderPress
+supprimer TOTO.CODE
+Compile smp.text ==> TATA
+et ça marche. fichier TATA.CODE créé.
+
+Il fallait faire de la place pour le fichier code (TATA.CODE).
